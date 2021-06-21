@@ -24,12 +24,7 @@ func (c *Comic) GetChapter() []Chapter {
 		count := c.Pages[i]
 		for k := 1; k <= count; k++ {
 			s := fmt.Sprint(k)
-			sLen := len(s)
-			diff := 3 - sLen
-			for 0 < diff {
-				s = "0" + s
-				diff--
-			}
+			s = "000"[len(s):] + s
 			chapters[i].Urls = append(
 				chapters[i].Urls,
 				strings.Join([]string{c.Urls[i], s, "&rimg=1"}, ""),
