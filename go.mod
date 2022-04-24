@@ -16,5 +16,5 @@ require (
 	golang.org/x/net v0.0.0-20210510120150-4163338589ed // indirect
 	golang.org/x/text v0.3.6
 	google.golang.org/appengine v1.6.7 // indirect
-	gopkg.in/yaml.v2 v2.2.5 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
