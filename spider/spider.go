@@ -76,6 +76,7 @@ func (s *Spider) GetComic() (*Comic, error) {
 	collector.OnHTML("td:nth-child(2) > a:nth-child(6)",
 		func(e *colly.HTMLElement) {
 			b, _ := DecodeBig5([]byte(e.Text))
+			b = strings.Trim(b, " ")
 			comic.Title = b
 		},
 	)
